@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рассчитываем стоимость гамбургеров</title>
+</head>
+<body>
+    <script>
+        //Creating constructor for prices and calories
+        function Count (price, calories){
+            this.price = price;
+            this.calories = calories;
+        }
+        //Creating constructor for making Hamburgers
+        function Hamburger( size, stuffing ) {
+            this.size = size;
+            this.stuffing = stuffing;
+            Count.call(this);
+            this.size_small = new Count( 50, 20 );
+            this.size_large = new Count ( 100, 40 );
+            this.stuffing_cheese = new Count ( 10, 20 );
+            this.stuffing_salad = new Count ( 20, 5 );
+            this.stuffing_potato = new Count ( 15, 10 );
+            this.topping_mayo = new Count ( 20, 5 );
+            this.topping_spice = new Count ( 15, 0 );
+        }
+        //Adding topping for Hamburger
+        Hamburger.prototype.addTopping = function (topping) {
+            
+        };
+
+        var hamburger = new Hamburger( 'small', ['cheese', 'salad'] );
+        console.log(hamburger.stuffing);
+    </script>
+</body>
+</html>
