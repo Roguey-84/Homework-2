@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Рассчитываем стоимость гамбургеров</title>
+    <link rel="stylesheet" href="styles/styleforhamburgers.css">
 </head>
 <body>
+    <div class="wrapper">
+        <div class="makingData">
+            <h1>Закажите свой гамбургер</h1>
+            <img src="img/hamburger_small.png" alt="Гамбургер">
+            <fieldset class="making_hamburger">
+                <legend>Выберите размер:</legend>
+                <div class="ham_size">
+                    <input type="radio" id="small" name="ham_size" value="small">
+                    <label for="small">Маленький</label>
+                </div>
+                <div class="ham_size">
+                    <input type="radio" id="big" name="ham_size" value="big">
+                    <label for="big">Большой</label>
+                </div>
+            </fieldset>
+            <fieldset class="making_hamburger">
+                <legend>Выберите начинку:</legend>
+                <div class="stuffing">
+                    <input type="checkbox" id="cheese" name="stuffing" value="cheese">
+                    <label for="cheese">Сыр</label>
+                </div>
+                <div class="stuffing">
+                    <input type="checkbox" id="salad" name="stuffing" value="salad">
+                    <label for="salad">Салат</label>
+                </div>
+                <div class="stuffing">
+                    <input type="checkbox" id="potato" name="stuffing" value="potato">
+                    <label for="potato">Картошка</label>
+                </div>
+            </fieldset>
+            <fieldset class="making_hamburger">
+                <legend>Выберите добавку:</legend>
+                <div class="topping">
+                    <input type="checkbox" id="spices" name="topping" value="spices">
+                    <label for="spices">Специи</label>
+                </div>
+                <div class="topping">
+                    <input type="checkbox" id="mayo" name="topping" value="mayo">
+                    <label for="mayo">Майонез</label>
+                </div>
+            </fieldset>
+            <div class="sending_form" id="send_form">
+                <input type="submit" onclick="sendData" value="Рассчитать стоимость">
+            </div>
+        </div>
+        <div class="countData">
+
+        </div>
+
+    </div>
     <script>
+        'use strict';
+        function sendData() {
+
+        let size = document.getElementsByName('ham_size').value;
         //Creating constructor for prices and calories
         function Count (price, calories){
             this.price = price;
@@ -26,11 +81,13 @@
         }
         //Adding topping for Hamburger
         Hamburger.prototype.addTopping = function (topping) {
-            
+
+
         };
 
         var hamburger = new Hamburger( 'small', ['cheese', 'salad'] );
-        console.log(hamburger.stuffing);
+        console.log(size);
+        }
     </script>
 </body>
 </html>
