@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ;EACN,KAAK,EAAE,IAAI;;AACb,uBAAuB;EACrB,KAAK,EAAE,GAAG;EACV,KAAK,EAAE,IAAI;;AACb,GAAG;EACD,KAAK,EAAE,GAAG;;AACZ,iBAAiB;EACf,KAAK,EAAE,GAAG",
+"sources": ["styleforhamburgers.sass"],
+"names": [],
+"file": "styleforhamburgers.css"
+}
